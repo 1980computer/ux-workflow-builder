@@ -20,8 +20,7 @@ Instead of writing code, users drag and drop nodes—such as triggers, actions, 
 #### Reference design systems
 [shadcn](https://ui.shadcn.com/blocks), [Simple AI](https://www.simple-ai.dev/ai-agents), [Kata AI](https://kata.ai/), [Ebay GenAI](https://playbook.ebay.com/expressions), [Patternfly](https://www.patternfly.org/patternfly-ai/about-ai/), [IBM Carbon AI](https://carbondesignsystem.com/guidelines/carbon-for-ai/)
 
----
-
 #### Demo examples
+[reactflow/showcase](https://reactflow.dev/showcase)
 
 ---
