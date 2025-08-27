@@ -10,11 +10,16 @@ Instead of writing code, users drag and drop nodes—such as triggers, actions, 
 
 ---
 
-Reference companies
+####Reference companies
 [palantir](https://www.palantir.com/), [palantir](https://rivet.ironcladapp.com/), [flowiseai](https://flowiseai.com/), [n8n](https://n8n.io/), [Microsoft data formulator](https://github.com/microsoft/data-formulator), [Lang flow](https://www.langflow.org/), [pyspur](https://www.pyspur.dev/), [vellum](https://www.vellum.ai/), [Zapier](https://zapier.com/)
 
-Reference libraries
+####Reference libraries
+
 [React Flow](https://reactflow.dev/), [JsPlumb](https://jsplumbtoolkit.com/reactflow-alternative), [JointJS](https://www.jointjs.com/react-flow-alternative), [xyflow](https://xyflow.com/), [Butterfly](https://github.com/xyflow/awesome-node-based-uis), [shadcn](https://ui.shadcn.com/blocks)
 
-Reference design systems
+####Reference design systems
 [shadcn](https://ui.shadcn.com/blocks), [Simple AI](https://www.simple-ai.dev/ai-agents), [Kata AI](https://kata.ai/), [Ebay GenAI](https://playbook.ebay.com/expressions), [Patternfly](https://www.patternfly.org/patternfly-ai/about-ai/), [IBM Carbon AI](https://carbondesignsystem.com/guidelines/carbon-for-ai/)
+
+---
+
+Demo examples
