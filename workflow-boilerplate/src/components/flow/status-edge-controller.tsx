@@ -4,17 +4,13 @@ import type { EdgeExecutionState } from "@/lib/flow/workflow-execution-engine";
 import { StatusEdge } from "@/components/flow/status-edge";
 import type { EdgeProps } from "@xyflow/react";
 
-export function StatusEdgeController({
-	data,
-	...props
-}: EdgeProps<{
-	executionState?: EdgeExecutionState;
-}>) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function StatusEdgeController(props: EdgeProps<any>) {
 	return (
 		<StatusEdge
 			{...props}
 			data={{
-				error: !!data.executionState?.error,
+				status: props.data?.executionState?.error ? 'error' : 'pending',
 			}}
 		/>
 	);

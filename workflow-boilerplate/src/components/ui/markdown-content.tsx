@@ -16,7 +16,8 @@ const extractTextContent = (node: React.ReactNode): string => {
 		return node.map(extractTextContent).join("");
 	}
 	if (isValidElement(node)) {
-		return extractTextContent(node.props.children);
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		return extractTextContent((node as any).props.children);
 	}
 	return "";
 };

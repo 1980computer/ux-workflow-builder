@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Button, type ButtonProps } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import {
 	DropdownMenu,
 	DropdownMenuContent,
@@ -116,7 +116,7 @@ NodeHeaderActions.displayName = "NodeHeaderActions";
 
 /* NODE HEADER ACTION ------------------------------------------------------- */
 
-export interface NodeHeaderActionProps extends ButtonProps {
+export interface NodeHeaderActionProps extends React.ComponentProps<"button"> {
 	label: string;
 }
 

@@ -115,7 +115,7 @@ export function PromptCrafterNode({
 }: PromptCrafterProps) {
 	const updateNodeInternals = useUpdateNodeInternals();
 	const [isPopoverOpen, setIsPopoverOpen] = useState(false);
-	const editorViewRef = useRef<EditorView>();
+			const editorViewRef = useRef<EditorView | null>(null);
 
 	const handleCreateInput = useCallback(
 		(name: string) => {
@@ -188,7 +188,6 @@ export function PromptCrafterNode({
 					{deletable && (
 						<NodeHeaderAction
 							onClick={onDeleteNode}
-							variant="ghost"
 							label="Delete node"
 						>
 							<Trash />

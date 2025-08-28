@@ -115,12 +115,16 @@ export function GenerateTextNode({
 				<NodeHeaderActions>
 					<NodeHeaderStatus status={data.status} />
 					{deletable && (
-						<NodeHeaderAction
+						<Button
 							onClick={onDeleteNode}
-							label="Delete node"
+							variant="ghost"
+							size="sm"
+							className="nodrag size-6 p-1"
+							aria-label="Delete node"
+							title="Delete node"
 						>
 							<Trash />
-						</NodeHeaderAction>
+						</Button>
 					)}
 				</NodeHeaderActions>
 			</NodeHeader>

@@ -48,7 +48,6 @@ export function VisualizeTextNode({
 				<NodeHeaderActions>
 					<NodeHeaderAction
 						onClick={onDeleteNode}
-						variant="ghost"
 						label="Delete node"
 					>
 						<Trash />
