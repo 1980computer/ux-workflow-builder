@@ -19,7 +19,7 @@ import { useWorkflow } from "@/hooks/flow/use-workflow";
 import type { FlowNode } from "@/lib/flow/workflow";
 import { GenerateTextNodeController } from "@/components/flow/generate-text-node-controller";
 import { PromptCrafterNodeController } from "@/components/flow/prompt-crafter-node-controller";
-import { StatusEdgeController } from "@/components/flow/status-edge-controller";
+
 import { TextInputNodeController } from "@/components/flow/text-input-node-controller";
 import { VisualizeTextNodeController } from "@/components/flow/visualize-text-node-controller";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -31,9 +31,7 @@ const nodeTypes: NodeTypes = {
 	"prompt-crafter": PromptCrafterNodeController,
 };
 
-const edgeTypes: EdgeTypes = {
-	status: StatusEdgeController,
-};
+const edgeTypes: EdgeTypes = {};
 
 function Flow() {
 	const store = useWorkflow(
@@ -111,7 +109,7 @@ function Flow() {
 			<NodesPanel />
 			<Panel position="top-right" className="flex gap-2 items-center p-3 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg">
 				<ThemeToggle />
-				<ErrorIndicator errors={store.workflowExecutionState.errors} />
+				<ErrorIndicator errors={store.workflowExecutionState.errors.map(error => error.message || 'Unknown error')} />
 				<Button
 					variant="default"
 					onClick={onStartExecution}
