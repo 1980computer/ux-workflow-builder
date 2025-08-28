@@ -5,7 +5,7 @@ import { Node } from 'reactflow';
 
 interface NodeToolbarProps {
   node: Node;
-  onUpdate: (nodeId: string, newData: any) => void;
+  onUpdate: (nodeId: string, newData: Record<string, unknown>) => void;
   onDelete: (nodeId: string) => void;
   onClose: () => void;
 }

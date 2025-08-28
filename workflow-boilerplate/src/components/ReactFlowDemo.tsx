@@ -13,6 +13,7 @@ import ReactFlow, {
   MiniMap,
   Panel,
   NodeTypes,
+  ReactFlowInstance,
 } from 'reactflow';
 import 'reactflow/dist/style.css';
 
@@ -69,7 +70,7 @@ export default function ReactFlowDemo() {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
   const [selectedNode, setSelectedNode] = useState<Node | null>(null);
-  const [reactFlowInstance, setReactFlowInstance] = useState<any>(null);
+  const [reactFlowInstance, setReactFlowInstance] = useState<ReactFlowInstance | null>(null);
 
   const onConnect = useCallback(
     (params: Connection) => setEdges((eds) => addEdge(params, eds)),
@@ -91,7 +92,7 @@ export default function ReactFlowDemo() {
     );
   }, [setNodes]);
 
-  const updateNodeData = useCallback((nodeId: string, newData: any) => {
+  const updateNodeData = useCallback((nodeId: string, newData: Record<string, unknown>) => {
     setNodes((nds) =>
       nds.map((n) =>
         n.id === nodeId

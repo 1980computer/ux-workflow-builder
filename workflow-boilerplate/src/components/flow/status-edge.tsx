@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { BaseEdge, EdgeLabelRenderer, getBezierPath } from '@xyflow/react';
+import { BaseEdge, EdgeLabelRenderer, getBezierPath, Position } from '@xyflow/react';
 
 interface StatusEdgeData {
   status?: 'pending' | 'running' | 'completed' | 'error';
@@ -14,8 +14,8 @@ interface StatusEdgeProps {
   sourceY: number;
   targetX: number;
   targetY: number;
-  sourcePosition?: any;
-  targetPosition?: any;
+  sourcePosition?: Position;
+  targetPosition?: Position;
   data?: StatusEdgeData;
   selected?: boolean;
 }
