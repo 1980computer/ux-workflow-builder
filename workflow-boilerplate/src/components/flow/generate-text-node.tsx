@@ -117,7 +117,6 @@ export function GenerateTextNode({
 					{deletable && (
 						<NodeHeaderAction
 							onClick={onDeleteNode}
-							variant="ghost"
 							label="Delete node"
 						>
 							<Trash />
