@@ -12,7 +12,7 @@ Instead of writing code, users drag and drop nodes—such as triggers, actions, 
 
 #### Reference companies
 
-- [palantir](https://www.palantir.com/), [ironcladapp](https://rivet.ironcladapp.com/), [flowiseai](https://flowiseai.com/), [n8n](https://n8n.io/), [Microsoft data formulator](https://github.com/microsoft/data-formulator), [Lang flow](https://www.langflow.org/), [pyspur](https://www.pyspur.dev/), [vellum](https://www.vellum.ai/), [Zapier](https://zapier.com/)
+- [Palantir](https://www.palantir.com/), [ironcladapp](https://rivet.ironcladapp.com/), [flowiseai](https://flowiseai.com/), [n8n](https://n8n.io/), [Microsoft data formulator](https://github.com/microsoft/data-formulator), [Lang flow](https://www.langflow.org/), [pyspur](https://www.pyspur.dev/), [vellum](https://www.vellum.ai/), [Zapier](https://zapier.com/), [Comfy](http://comfy.org/)
 
 #### Reference libraries
 
@@ -20,7 +20,7 @@ Instead of writing code, users drag and drop nodes—such as triggers, actions, 
 
 #### Reference design systems
 
-- [shadcn](https://ui.shadcn.com/blocks), [Simple AI](https://www.simple-ai.dev/ai-agents), [Kata AI](https://kata.ai/), [Ebay GenAI](https://playbook.ebay.com/expressions), [Patternfly](https://www.patternfly.org/patternfly-ai/about-ai/), [IBM Carbon AI](https://carbondesignsystem.com/guidelines/carbon-for-ai/)
+- [Shadcn](https://ui.shadcn.com/blocks), [Simple AI](https://www.simple-ai.dev/ai-agents), [Kata AI](https://kata.ai/), [Ebay GenAI](https://playbook.ebay.com/expressions), [Patternfly](https://www.patternfly.org/patternfly-ai/about-ai/), [IBM Carbon AI](https://carbondesignsystem.com/guidelines/carbon-for-ai/)
 
 #### Demo examples
 
