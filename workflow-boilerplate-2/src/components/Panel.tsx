@@ -20,7 +20,7 @@ const Panel: React.FC<PanelProps> = ({ side, children, className = '', isCollaps
     return null;
   }
 
-  const panelWidth = isExpanded ? 'w-[300px]' : 'w-8';
+  const panelWidth = isExpanded ? 'w-[300px]' : 'w-9';
 
   const borderClass = 'border border-gray-200 dark:border-dark-grey';
   

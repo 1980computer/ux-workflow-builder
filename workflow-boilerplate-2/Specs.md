@@ -31,7 +31,8 @@ A modern React template using shadcn/ui components with a professional 3-panel l
 ### Global Header
 - 100% width, 48px height
 - White background, #E5E7EB bottom border
-- "Workflow" title (17px font, no icon)
+- **Workspace Dropdown**: Left-aligned dropdown with "Workflow" branding, 12px spacing between arrow and text
+- **Navigation Buttons**: Center-aligned "Node", "Form", "Integrations" buttons (Node selected, Form/Integrations disabled)
 - Action icons: notification bell (20x20px, white in dark mode)
 - User avatar with person-circle icon (20x20px, white in dark mode)
 - No tenant selector
@@ -43,7 +44,7 @@ A modern React template using shadcn/ui components with a professional 3-panel l
 
 ### Panels (Left & Right)
 - **Expanded**: 300px width
-- **Collapsed**: 32px width
+- **Collapsed**: 36px width
 - **Visibility**: Always visible on all screen sizes (desktop, tablet, mobile)
 - **User Control**: Users can manually collapse/expand panels using floating arrow buttons
 - White background, #E5E7EB border (right border for left panel, left border for right panel)
@@ -205,7 +206,7 @@ src/
 - **Left Panel**: Workflow controls with "ADD NODES" and "ACTIONS" sections for workflow management
 - **Right Panel**: Node configuration panel - click on any node to configure its properties
 - **Canvas**: Full-screen React Flow workflow builder with interactive node-based editor
-- **Header**: "Workflow" branding, notification icon, user avatar with dropdown menu
+- **Header**: Workspace dropdown with "Workflow" branding, navigation buttons (Node/Form/Integrations), notification icon, user avatar with dropdown menu
 - **No Waffle Icon**: Waffle icon has been removed from the header
 - **No Sheet Menu**: Sheet menu functionality has been removed
 - **Autopilot Panel**: Autopilot icon opens a 440px wide panel from the right. Global header remains fixed, content area shifts left by 440px. Panel has white background, 1px border, and an 'X' close button in the top-right. **Hidden by default** - only appears when autopilot icon is clicked.

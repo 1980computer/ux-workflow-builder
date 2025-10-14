@@ -148,4 +148,45 @@
     background-color: #1a1a1a;
     border: 1px solid #2a2a2a;
   }
+
+  /* Custom Select spacing override - Target shadcn/ui classes */
+  .select-trigger-custom {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    justify-content: flex-start !important;
+    gap: 12px !important;
+  }
+
+  .select-trigger-custom [data-radix-select-trigger] {
+    gap: 12px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    justify-content: flex-start !important;
+  }
+
+  .select-trigger-custom [data-radix-select-trigger] > svg {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    padding: 0 !important;
+  }
+
+  .select-trigger-custom [data-radix-select-trigger] > span {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Override the shadcn px-3 class specifically */
+  .select-trigger-custom.px-3 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Force all internal elements to have no spacing */
+  .select-trigger-custom [data-radix-select-trigger] * {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 }

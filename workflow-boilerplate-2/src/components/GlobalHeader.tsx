@@ -76,6 +76,8 @@ const GlobalHeader: React.FC<GlobalHeaderProps> = ({
   const [isDarkMode, setIsDarkMode] = useState(true)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
+  const [activeView, setActiveView] = useState('Node')
+  const [selectedWorkspace, setSelectedWorkspace] = useState('Workflow')
 
   useEffect(() => {
     // Check for saved theme preference or default to dark mode
@@ -135,7 +137,8 @@ const GlobalHeader: React.FC<GlobalHeaderProps> = ({
   }
   return (
     <header className={`h-12 min-h-12 max-h-12 bg-white dark:bg-dark-grey border-b border-gray-200 dark:border-dark-grey flex items-center px-4 flex-shrink-0 ${className}`}>
-      <div className="flex items-center gap-3">
+      {/* Left Section - Workspace Dropdown */}
+      <div className="flex items-center gap-3 justify-start">
         {branding.logo && (
           <Sheet>
             <SheetTrigger asChild>
@@ -191,12 +194,55 @@ const GlobalHeader: React.FC<GlobalHeaderProps> = ({
             </SheetContent>
           </Sheet>
         )}
-        <span className="font-semibold text-gray-900 dark:text-white" style={{ fontSize: '17px' }}>
-          {branding.title}
-        </span>
+        
+        {/* Workspace Dropdown */}
+        <Select value={selectedWorkspace} onValueChange={setSelectedWorkspace}>
+          <SelectTrigger className="select-trigger-custom w-[160px] h-8 text-sm font-semibold border-0 focus:ring-0 focus:outline-none bg-transparent hover:bg-gray-100 dark:hover:bg-gray-700 [&>svg]:order-first [&>svg]:mr-0 [&>svg]:ml-0 [&>span]:ml-0">
+            <SelectValue placeholder="Workflow" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="Workflow">Workflow</SelectItem>
+            <SelectItem value="Workflow 2">Workflow 2</SelectItem>
+            <SelectItem value="Workflow 3">Workflow 3</SelectItem>
+            <SelectItem value="Workflow 4">Workflow 4</SelectItem>
+          </SelectContent>
+        </Select>
       </div>
       
-      <div className="flex-1 flex justify-end items-center gap-[20px]">
+      {/* Center Section - Navigation Buttons */}
+      <div className="flex-1 flex justify-center items-center gap-1">
+        <Button
+          variant={activeView === 'Node' ? 'default' : 'ghost'}
+          size="sm"
+          className={`h-8 px-3 text-sm font-medium ${
+            activeView === 'Node' 
+              ? 'bg-gray-200 dark:bg-dark-grey-light text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600' 
+              : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700'
+          }`}
+          onClick={() => setActiveView('Node')}
+        >
+          Node
+        </Button>
+        <Button
+          variant="ghost"
+          size="sm"
+          className="h-8 px-3 text-sm font-medium text-gray-400 dark:text-gray-500 cursor-not-allowed"
+          disabled
+        >
+          Form
+        </Button>
+        <Button
+          variant="ghost"
+          size="sm"
+          className="h-8 px-3 text-sm font-medium text-gray-400 dark:text-gray-500 cursor-not-allowed"
+          disabled
+        >
+          Integrations
+        </Button>
+      </div>
+      
+      {/* Right Section - Action Icons */}
+      <div className="flex items-center gap-[20px]">
         {/* Action Icons */}
         {actions.map((action, index) => {
               // Check if this is search, help, notification, or autopilot icon for special handling
