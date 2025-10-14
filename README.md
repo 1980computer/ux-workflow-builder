@@ -45,7 +45,7 @@ A collection of modern workflow builder templates for creating interactive workf
 
 ```bash
 # Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/1980computer/ux-workflow-builder.git
 cd ux-workflow-builder
 
 # Choose your template
@@ -121,6 +121,23 @@ Both templates include Docker support for containerized deployment.
 ## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+---
+
+## 🔗 Reference Resources
+
+### Reference Companies
+- [Palantir](https://www.palantir.com/), [ironcladapp](https://rivet.ironcladapp.com/), [flowiseai](https://flowiseai.com/), [n8n](https://n8n.io/), [Microsoft data formulator](https://github.com/microsoft/data-formulator), [Lang flow](https://www.langflow.org/), [pyspur](https://www.pyspur.dev/), [vellum](https://www.vellum.ai/), [Zapier](https://zapier.com/), [Comfy](http://comfy.org/)
+
+### Reference Libraries
+- [React Flow](https://reactflow.dev/), [JsPlumb](https://jsplumbtoolkit.com/reactflow-alternative), [JointJS](https://www.jointjs.com/react-flow-alternative), [xyflow](https://xyflow.com/), [Butterfly](https://github.com/xyflow/awesome-node-based-uis), [shadcn](https://ui.shadcn.com/blocks)
+
+### Reference Design Systems
+- [Shadcn](https://ui.shadcn.com/blocks), [Simple AI](https://www.simple-ai.dev/ai-agents), [Kata AI](https://kata.ai/), [Ebay GenAI](https://playbook.ebay.com/expressions), [Patternfly](https://www.patternfly.org/patternfly-ai/about-ai/), [IBM Carbon AI](https://carbondesignsystem.com/guidelines/carbon-for-ai/)
+
+### Demo Examples
+- [reactflow/showcase](https://reactflow.dev/showcase)
+- Use the `/workflow-boilerplate-1` or `/workflow-boilerplate-2` directories in this repository
 
 ---
 
