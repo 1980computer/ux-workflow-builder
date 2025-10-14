@@ -1,265 +1,232 @@
-# AI Workflow Builder
+# Workflow Boilerplate 1 - Next.js Workflow Builder
 
-A sophisticated AI workflow builder built with Next.js, React Flow, and modern design systems. This project provides a professional interface for creating, editing, and executing AI-powered workflows with drag-and-drop functionality, real-time execution, and beautiful UI.
+A modern Next.js template for building AI-powered workflow applications with React Flow integration, real-time execution, and comprehensive node management.
 
-## 🚀 Getting Started
+## 🚀 Quick Start
 
 ### Prerequisites
 - Node.js 18+ 
 - npm or yarn
-- Groq API key (for AI functionality)
+- Git
 
 ### Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd workflow-boilerplate
-   ```
+```bash
+# Clone the repository
+git clone <your-repo-url>
+cd workflow-boilerplate-1
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+# Install dependencies
+npm install
 
-3. **Set up environment variables**
-   Create a `.env.local` file in the root directory:
-   ```env
-   GROQ_API_KEY=your_groq_api_key_here
-   ```
+# Start development server
+npm run dev
+```
 
-4. **Start the development server**
-   ```bash
-   npm run dev
-   ```
-
-5. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
-
-### Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
-- `npm run type-check` - Run TypeScript type checking
-
-## 🚀 Features
-
-- **Interactive Workflow Builder** - Drag-and-drop interface for creating AI workflows
-- **Real-time Execution** - Execute workflows with live status updates
-- **Dark Mode Support** - Beautiful dark and light theme switching
-- **Professional UI** - Clean, modern design inspired by Simple AI
-- **Node Types** - Multiple AI node types (Text Input, Generate Text, Prompt Crafter, Visualize Text)
-- **Responsive Design** - Works seamlessly on desktop and mobile
-- **TypeScript** - Full type safety throughout the application
+Open [http://localhost:3000](http://localhost:3000) to view the application.
 
 ## 🛠 Tech Stack
 
 ### Core Framework
-- **Next.js 15.5.2** - React framework with App Router
-- **React 18** - UI library
+- **Next.js 14** - React framework with App Router
+- **React 18** - UI library with hooks and concurrent features
 - **TypeScript** - Type-safe development
 
 ### Workflow Engine
-- **@xyflow/react** - React Flow library for node-based editors
-- **Zustand** - State management for workflow execution
-- **Server-Sent Events (SSE)** - Real-time workflow execution updates
+- **React Flow** - Interactive node-based workflow builder
+- **Custom Node Types** - Text input, AI generation, visualization nodes
+- **Real-time Execution** - SSE-based workflow processing
+- **Node Management** - Add, edit, delete, and configure nodes
 
-### UI & Design System
+### UI & Styling
 - **Tailwind CSS** - Utility-first CSS framework
 - **shadcn/ui** - High-quality React components
-- **Lucide React** - Beautiful icon library
-- **next-themes** - Dark mode support
+- **Lucide React** - Beautiful icons
+- **Dark/Light Mode** - Theme switching support
 
 ### AI Integration
-- **Vercel AI SDK** - AI model integration
-- **Groq API** - LLM provider (requires API key)
-- **React Markdown** - Markdown rendering for AI outputs
+- **OpenAI API** - AI text generation
+- **Custom Processors** - Node-specific AI processing
+- **Streaming Responses** - Real-time AI output
 
 ### Development Tools
-- **Turbopack** - Fast bundler for development
 - **ESLint** - Code linting
-- **Prettier** - Code formatting
-
-## 🎨 Design System
-
-### Typography
-- **Font**: Inter (Google Fonts)
-- **Font Features**: OpenType features for improved readability
-- **Font Smoothing**: Optimized text rendering
-
-### Color Palette
-The design system uses CSS custom properties for consistent theming:
-
-```css
-/* Light Mode */
---background: oklch(1 0 0);
---foreground: oklch(0.129 0.042 264.695);
---primary: oklch(0.208 0.042 265.755);
---secondary: oklch(0.968 0.007 247.896);
-
-/* Dark Mode */
---background: oklch(0.129 0.042 264.695);
---foreground: oklch(0.984 0.003 247.858);
---primary: oklch(0.929 0.013 255.508);
---secondary: oklch(0.279 0.041 260.031);
-```
-
-### Component Styling
-- **Rounded Corners**: Consistent border radius (0.625rem)
-- **Shadows**: Subtle shadows for depth and hierarchy
-- **Transitions**: Smooth animations (200ms duration)
-- **Backdrop Blur**: Modern glassmorphism effects
+- **TypeScript** - Type checking
+- **PostCSS** - CSS processing
+- **Hot Reload** - Development experience
 
 ## 📁 Project Structure
 
 ```
-workflow-boilerplate/
-├── src/
-│   ├── app/
-│   │   ├── layout.tsx          # Root layout with theme provider
-│   │   ├── page.tsx            # Home page (redirects to workflow)
-│   │   ├── workflow/
-│   │   │   └── page.tsx        # Main workflow interface
-│   │   ├── globals.css         # Global styles and CSS variables
-│   │   └── api/
-│   │       └── workflow/
-│   │           └── execute/
-│   │               └── route.ts # Workflow execution API
-│   ├── components/
-│   │   ├── ui/                 # shadcn/ui components
-│   │   ├── flow/               # React Flow components
-│   │   │   ├── base-node.tsx   # Base node component
-│   │   │   ├── nodes-panel.tsx # Node toolbar
-│   │   │   ├── node-header.tsx # Node header components
-│   │   │   └── ...            # Other flow components
-│   │   ├── theme-toggle.tsx    # Dark mode toggle
-│   │   ├── theme-provider.tsx  # Theme context provider
-│   │   └── error-indicator.tsx # Error display component
-│   ├── lib/
-│   │   ├── workflow.ts         # Workflow types and utilities
-│   │   ├── workflow-execution-engine.ts # Execution logic
-│   │   └── generate-ai-text.ts # AI text generation
-│   └── hooks/
-│       └── use-workflow.ts     # Workflow state management
-├── public/                     # Static assets
-├── package.json               # Dependencies and scripts
-└── README.md                  # This file
+src/
+├── app/                          # Next.js App Router
+│   ├── api/workflow/execute/     # Workflow execution API
+│   ├── globals.css              # Global styles
+│   ├── layout.tsx               # Root layout
+│   ├── page.tsx                 # Home page
+│   └── workflow/page.tsx        # Workflow builder page
+├── components/
+│   ├── flow/                    # React Flow components
+│   │   ├── base-node.tsx        # Base node component
+│   │   ├── text-input-node.tsx  # Text input node
+│   │   ├── generate-text-node.tsx # AI generation node
+│   │   └── visualize-text-node.tsx # Visualization node
+│   ├── ui/                      # shadcn/ui components
+│   └── CustomNode.tsx           # Custom node wrapper
+├── hooks/
+│   └── flow/use-workflow.ts     # Workflow state management
+├── lib/
+│   ├── flow/                    # Workflow engine
+│   │   ├── workflow-execution-engine.ts
+│   │   ├── sse-workflow-execution-engine.ts
+│   │   └── node-factory.ts
+│   └── utils.ts                 # Utility functions
+└── types/                       # TypeScript definitions
 ```
 
-## 🎯 Usage
-
-### Creating Workflows
-
-1. **Add Nodes**: Drag nodes from the top toolbar to the canvas
-2. **Connect Nodes**: Click and drag from node handles to create connections
-3. **Configure Nodes**: Click on nodes to edit their properties
-4. **Execute Workflow**: Click "Run Flow" to execute the workflow
-
-### Node Types
-
-- **Text Input**: Add text content or prompts
-- **Generate Text**: AI text generation with configurable models
-- **Prompt Crafter**: Create and manage AI prompts
-- **Visualize Text**: Display and format text outputs
-
-### Theme Switching
-
-Click the sun/moon icon in the top-right corner to switch between:
-- **Light Mode**: Clean, bright interface
-- **Dark Mode**: Professional dark theme
-- **System**: Follows your OS preference
-
-## 🎨 Customization
-
-### Styling Components
-
-The project uses Tailwind CSS with custom CSS variables. To customize:
-
-1. **Colors**: Modify CSS variables in `src/app/globals.css`
-2. **Components**: Edit shadcn/ui components in `src/components/ui/`
-3. **Nodes**: Customize node styling in `src/components/flow/`
-
-### Adding New Node Types
-
-1. Create a new node component in `src/components/flow/`
-2. Add the node type to the `nodeTypes` object in `src/app/workflow/page.tsx`
-3. Update the `NodesPanel` component to include the new node type
-
-### Custom Workflows
-
-1. Define workflow structure in `src/lib/`
-2. Add workflow execution logic
-3. Update the workflow initialization in the main page
-
-## 🔧 Configuration
+## 🔧 Setup Information
 
 ### Environment Variables
 
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `GROQ_API_KEY` | Groq API key for AI functionality | Yes |
-| `NEXT_PUBLIC_APP_URL` | Application URL for production | No |
+Create a `.env.local` file in the root directory:
 
-### Tailwind Configuration
+```env
+OPENAI_API_KEY=your_openai_api_key_here
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+```
 
-The project uses a custom Tailwind configuration with:
-- Custom color palette
-- Extended spacing and typography
-- Custom animations and transitions
+### Development Commands
 
-### TypeScript Configuration
+```bash
+# Start development server
+npm run dev
 
-Strict TypeScript configuration with:
-- Strict mode enabled
-- Path mapping for clean imports
-- Custom type definitions for workflow components
+# Build for production
+npm run build
 
-## 🚀 Deployment
+# Start production server
+npm start
 
-### Vercel (Recommended)
+# Run linting
+npm run lint
 
+# Type checking
+npm run type-check
+```
+
+### Deployment
+
+#### Vercel (Recommended)
 1. Push your code to GitHub
 2. Connect your repository to Vercel
-3. Set environment variables in Vercel dashboard
-4. Deploy automatically on push
+3. Add environment variables in Vercel dashboard
+4. Deploy automatically
 
-### Other Platforms
+#### Netlify
+1. Build the project: `npm run build`
+2. Deploy the `out` folder to Netlify
+3. Configure environment variables
 
-The project can be deployed to any platform that supports Next.js:
-- Netlify
-- Railway
-- DigitalOcean App Platform
-- AWS Amplify
+#### Docker
+```dockerfile
+FROM node:18-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production
+COPY . .
+RUN npm run build
+EXPOSE 3000
+CMD ["npm", "start"]
+```
+
+## 🎯 Features
+
+### Workflow Builder
+- **Drag & Drop Interface** - Intuitive node creation
+- **Multiple Node Types** - Text input, AI generation, visualization
+- **Real-time Execution** - Live workflow processing
+- **Node Configuration** - Customize node properties
+- **Connection Management** - Link nodes with edges
+
+### AI Integration
+- **OpenAI Integration** - GPT-powered text generation
+- **Streaming Responses** - Real-time AI output
+- **Custom Processors** - Node-specific AI logic
+- **Error Handling** - Robust error management
+
+### User Experience
+- **Dark/Light Mode** - Theme switching
+- **Responsive Design** - Mobile-friendly interface
+- **Real-time Updates** - Live workflow status
+- **Node Management** - Add, edit, delete nodes
+
+## 🔌 API Endpoints
+
+### POST `/api/workflow/execute`
+Execute a workflow with real-time streaming.
+
+**Request Body:**
+```json
+{
+  "nodes": [...],
+  "edges": [...],
+  "workflowId": "unique-id"
+}
+```
+
+**Response:** Server-Sent Events stream with execution updates.
+
+## 🎨 Customization
+
+### Adding New Node Types
+1. Create a new node component in `src/components/flow/`
+2. Add the node type to the node factory
+3. Implement the node processor in `src/lib/flow/`
+4. Update the workflow execution engine
+
+### Styling
+- Modify `src/app/globals.css` for global styles
+- Use Tailwind classes for component styling
+- Customize shadcn/ui components in `src/components/ui/`
+
+### Theme Customization
+- Update theme colors in `tailwind.config.js`
+- Modify dark/light mode styles in `globals.css`
+- Customize component themes in individual files
+
+## 🚀 Production Deployment
+
+### Build Optimization
+- Automatic code splitting
+- Image optimization
+- Bundle analysis
+- Performance monitoring
+
+### Environment Setup
+- Configure production environment variables
+- Set up monitoring and logging
+- Configure CDN for static assets
+- Set up error tracking
+
+## 📚 Additional Resources
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [React Flow Documentation](https://reactflow.dev/)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [shadcn/ui Components](https://ui.shadcn.com/)
 
 ## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
 
-## 📝 License
+## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- **Simple AI** - Design inspiration and workflow patterns
-- **shadcn/ui** - High-quality component library
-- **React Flow** - Powerful node-based editor
-- **Vercel AI SDK** - AI integration tools
-
-## 📞 Support
-
-If you encounter any issues or have questions:
-
-1. Check the [Issues](../../issues) page
-2. Create a new issue with detailed information
-3. Include steps to reproduce the problem
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
 
-**Built with ❤️ using Next.js, React Flow, and modern web technologies**
+**Ready to build amazing workflows?** Start with `npm run dev` and explore the possibilities! 🚀
