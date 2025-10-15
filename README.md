@@ -20,7 +20,7 @@ Instead of writing code, users drag and drop nodes—such as triggers, actions, 
 
 #### Reference design systems
 
-- [Shadcn](https://ui.shadcn.com/blocks), [Simple AI](https://www.simple-ai.dev/ai-agents), [Kata AI](https://kata.ai/), [Ebay GenAI](https://playbook.ebay.com/expressions), [Patternfly](https://www.patternfly.org/patternfly-ai/about-ai/), [IBM Carbon AI](https://carbondesignsystem.com/guidelines/carbon-for-ai/)
+- [Simple AI](https://www.simple-ai.dev/ai-agents), [AI SDK](https://ai-sdk.dev/elements/examples/workflow), [Shadcn](https://ui.shadcn.com/blocks), [ShadcnAI](https://www.shadcn.io/ai), [Kata AI](https://kata.ai/), [Ebay GenAI](https://playbook.ebay.com/expressions), [Patternfly](https://www.patternfly.org/patternfly-ai/about-ai/), [IBM Carbon AI](https://carbondesignsystem.com/guidelines/carbon-for-ai/)
 
 #### Demo examples
 
