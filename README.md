@@ -16,7 +16,7 @@ Instead of writing code, users drag and drop nodes—such as triggers, actions, 
 
 #### Reference libraries
 
-- [React Flow](https://reactflow.dev/), [JsPlumb](https://jsplumbtoolkit.com/reactflow-alternative), [JointJS](https://www.jointjs.com/react-flow-alternative), [xyflow](https://xyflow.com/), [Butterfly](https://github.com/xyflow/awesome-node-based-uis), [shadcn](https://ui.shadcn.com/blocks)
+- [React Flow](https://reactflow.dev/), [JsPlumb](https://jsplumbtoolkit.com/reactflow-alternative), [JointJS](https://www.jointjs.com/react-flow-alternative), [xyflow](https://xyflow.com/), [Butterfly](https://github.com/xyflow/awesome-node-based-uis), [shadcn](https://ui.shadcn.com/blocks), [rete](https://github.com/retejs/rete/)
 
 #### Reference design systems
 
